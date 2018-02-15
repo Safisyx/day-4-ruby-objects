@@ -1,5 +1,7 @@
 require_relative "cook.rb"
 
+
+=begin
 cook_1 = Cook.new('Peter P. Pendergrass', ["No dish is complete without sugar", "Parsley adds taste to anything"])
 cook_2 = Cook.new('Patricia Klassen', ["Cream makes everything better"])
 cook_3 = Cook.new('Pamela M. Fiscus', ["Heat your food as little as possible"])
@@ -51,3 +53,16 @@ my_cook.go_to_work
 my_cook.make("sandwich")
 my_cook.make("pizza quattro formaggi")
 my_cook.print_details
+
+=end
+
+cook_1 = Cook.new('Peter P. Pendergrass', ["No dish is complete without sugar"],[], "on_duty", true)
+cook_2 = Cook.new('Patricia Klassen', ["Cream makes everything better"])
+cook_3 = Cook.new('Pamela M. Fiscus', ["Heat your food as little as possible"])
+safidy = Cook.new('S. Ratsimbazafy')
+
+restorant = Restorant.new('Pizza Palace',4,[cook_1,cook_2,cook_3])
+
+restorant.print_cooks
+restorant.add_cook(safidy)
+restorant.print_cooks

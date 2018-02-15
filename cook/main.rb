@@ -46,6 +46,7 @@ my_cook.make("hamburger")
 my_cook.make("hamburger")
 
 my_cook.print_details
+sleep(1)
 my_cook.go_to_work
 my_cook.make("sandwich")
 my_cook.make("pizza quattro formaggi")

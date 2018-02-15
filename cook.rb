@@ -1,10 +1,11 @@
 class Cook
-  attr_accessor :name, :secrets, :dishes
+  attr_accessor :name, :secrets, :dishes, :activity
   DEFAULT_SECRET = 'If it does not taste well, you did not add enough butter'
-  def initialize(name, secrets = [DEFAULT_SECRET], dishes = [])
+  def initialize(name, secrets = [DEFAULT_SECRET], dishes = [], activity = "on_duty")
     @name = name
     @secrets = secrets
     @dishes = dishes
+    @activity = activity
   end
 
   def print_details
@@ -34,9 +35,27 @@ much more simpler use "secret.join(', ')"
     @secrets.shift if @secrets.include?(DEFAULT_SECRET) unless @secrets.count == 1
   end
 
-#make dishes
   def make(dish)
-    @dishes << dish
+    if on_duty?
+      puts "Here you go..."
+      @dishes << dish
+      day_off if @dishes.count == 10
+    else
+      puts "Sorry, not on duty!!"
+    end
+  end
+
+  def day_off
+    @activity = "day_off"
+  end
+
+  def on_duty?
+    @activity == "on_duty"
+  end
+
+  def go_to_work
+    @activity = "on_duty"
+    @dishes = []
   end
 
 end

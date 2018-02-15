@@ -26,5 +26,27 @@ cook_1.remove_default
 cook_1.print_details
 
 my_cook.make("Vary @anana")
-my_cook.make("Hamburger")
+my_cook.day_off
+my_cook.make("Something")
+my_cook.print_details
+
+puts "------------------------------------------------------"
+
+my_cook.go_to_work
+my_cook.make("hamburger")
+my_cook.make("hamburger")
+my_cook.make("hamburger")
+my_cook.make("hamburger")
+my_cook.make("hamburger")
+my_cook.make("hamburger")
+my_cook.make("hamburger")
+my_cook.make("hamburger")
+my_cook.make("hamburger")
+my_cook.make("hamburger")
+my_cook.make("hamburger")
+
+my_cook.print_details
+my_cook.go_to_work
+my_cook.make("sandwich")
+my_cook.make("pizza quattro formaggi")
 my_cook.print_details

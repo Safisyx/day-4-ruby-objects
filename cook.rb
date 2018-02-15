@@ -1,7 +1,8 @@
 class Cook
   attr_accessor :name, :secrets
 
-  def initialize(name, secrets)
+  def initialize(name, secrets = ['If it does not taste well, you did not add enough butter'
+])
     @name = name
     @secrets = secrets
   end
@@ -17,7 +18,13 @@ class Cook
     puts ""
     puts "amount of secrets: #{@secrets.length}"
   end
+
 =begin
 much more simpler use "secret.join(', ')"
 =end
+
+  def add_secret(secret)
+    @secrets = [] if @secrets == ['If it does not taste well, you did not add enough butter']
+    @secrets << secret
+  end
 end

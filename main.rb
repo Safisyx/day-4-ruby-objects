@@ -9,3 +9,9 @@ cook_1.print_details
 cook_2.print_details
 cook_3.print_details
 cook_4.print_details
+
+my_cook = Cook.new('S. Ratsimbazafy')
+my_cook.print_details
+my_cook.add_secret("Keep calm and google it!")
+my_cook.add_secret("Follow your intuition!")
+my_cook.print_details

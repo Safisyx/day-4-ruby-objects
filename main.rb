@@ -16,7 +16,7 @@ my_cook.print_details
 my_cook.remove_default
 my_cook.print_details
 
-my_cook.add_secret("Keep calm and google it!")
+my_cook.add_secret("Keep calm and goggle it")
 my_cook.print_details
 
 my_cook.remove_default
@@ -24,3 +24,7 @@ my_cook.print_details
 
 cook_1.remove_default
 cook_1.print_details
+
+my_cook.make("Vary @anana")
+my_cook.make("Hamburger")
+my_cook.print_details

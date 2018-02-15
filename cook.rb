@@ -1,10 +1,10 @@
 class Cook
-  attr_accessor :name, :secrets
-
-  def initialize(name, secrets = ['If it does not taste well, you did not add enough butter'
-])
+  attr_accessor :name, :secrets, :dishes
+  DEFAULT_SECRET = 'If it does not taste well, you did not add enough butter'
+  def initialize(name, secrets = [DEFAULT_SECRET], dishes = [])
     @name = name
     @secrets = secrets
+    @dishes = dishes
   end
 
   def print_details
@@ -17,6 +17,8 @@ class Cook
     }
     puts ""
     puts "amount of secrets: #{@secrets.length}"
+
+    puts "Dishes made : #{dishes.join(", ")}"
   end
 
 =begin
@@ -29,7 +31,12 @@ much more simpler use "secret.join(', ')"
   end
 
   def remove_default
-    d = 'If it does not taste well, you did not add enough butter'
-    @secrets.shift if @secrets.include?(d) unless @secrets.count == 1
+    @secrets.shift if @secrets.include?(DEFAULT_SECRET) unless @secrets.count == 1
   end
+
+#make dishes
+  def make(dish)
+    @dishes << dish
+  end
+
 end
